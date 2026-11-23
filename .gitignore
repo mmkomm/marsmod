@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+out/
+
+# Runs and generated data
+run/
+runs/
+run-data/
+repo/
+**/src/generated/**/.cache/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.run/
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+bin/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini

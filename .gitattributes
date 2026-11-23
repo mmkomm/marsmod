@@ -1,0 +1,16 @@
+# Line endings
+* text=auto
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Generated data always uses LF
+src/generated/**/.cache/* text eol=lf
+src/generated/**/*.json text eol=lf
+
+# Binary files
+*.png binary
+*.ogg binary
+*.jar binary
+*.zip binary
+*.pdf binary
+*.xlsx binary

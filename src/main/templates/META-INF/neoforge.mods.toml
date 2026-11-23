@@ -1,0 +1,25 @@
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="Darkblade (code), Joris (art)"
+credits="Developed for The Martian Mindset, Cluster of Excellence at the University of Bremen"
+description='''
+A Mars dimension with its own terrain, resources, machines and survival mechanics, based on the research of The Martian Mindset.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
