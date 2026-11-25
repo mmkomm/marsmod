@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "marsmod:block/regolith_dry"
+      },
+      {
+        "model": "marsmod:block/regolith_dry",
+        "y": 90
+      },
+      {
+        "model": "marsmod:block/regolith_dry",
+        "y": 180
+      },
+      {
+        "model": "marsmod:block/regolith_dry",
+        "y": 270
+      }
+    ]
+  }
+}

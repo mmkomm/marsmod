@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 
 import de.unibremen.marsmod.registry.ModBlocks;
+import de.unibremen.marsmod.registry.ModCreativeTabs;
 import de.unibremen.marsmod.registry.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -18,5 +19,6 @@ public class MarsMod {
     public MarsMod(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModCreativeTabs.TABS.register(modEventBus);
     }
 }

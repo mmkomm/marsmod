@@ -1,2 +1,11 @@
 {
+  "itemGroup.marsmod": "Mars Mod",
+  "block.marsmod.regolith_dry": "Dry Regolith",
+  "block.marsmod.regolith_loose": "Loose Regolith",
+  "block.marsmod.rock": "Rock",
+  "block.marsmod.ice": "Ice",
+  "biome.marsmod.mars_plains": "Mars Plains",
+  "commands.marsmod.mars": "Teleported to Mars at %s, %s, %s",
+  "commands.marsmod.earth": "Teleported to Earth at %s, %s, %s",
+  "commands.marsmod.missing_dimension": "Dimension %s not found"
 }

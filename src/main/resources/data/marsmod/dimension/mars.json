@@ -1,0 +1,11 @@
+{
+  "type": "marsmod:mars",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "marsmod:mars_plains"
+    },
+    "settings": "marsmod:mars"
+  }
+}

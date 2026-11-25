@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "marsmod:block/regolith_loose"
+      },
+      {
+        "model": "marsmod:block/regolith_loose",
+        "y": 90
+      },
+      {
+        "model": "marsmod:block/regolith_loose",
+        "y": 180
+      },
+      {
+        "model": "marsmod:block/regolith_loose",
+        "y": 270
+      }
+    ]
+  }
+}
