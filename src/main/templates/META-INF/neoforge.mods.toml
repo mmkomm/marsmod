@@ -10,6 +10,9 @@ description='''
 A Mars dimension with its own terrain, resources, machines and survival mechanics, based on the research of The Martian Mindset.
 '''
 
+[[mixins]]
+config="${mod_id}.mixins.json"
+
 [[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"

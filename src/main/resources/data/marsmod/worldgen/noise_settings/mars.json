@@ -479,33 +479,2942 @@
             {
               "type": "minecraft:condition",
               "if_true": {
-                "type": "minecraft:stone_depth",
-                "offset": 0,
-                "surface_type": "floor",
-                "add_surface_depth": false,
-                "secondary_depth_range": 0
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:plains"
+                ]
               },
               "then_run": {
-                "type": "minecraft:block",
-                "result_state": {
-                  "Name": "marsmod:regolith_dry"
-                }
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_loose"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "ceiling",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:rock"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_loose"
+                      }
+                    }
+                  }
+                ]
               }
             },
             {
               "type": "minecraft:condition",
               "if_true": {
-                "type": "minecraft:stone_depth",
-                "offset": 0,
-                "surface_type": "floor",
-                "add_surface_depth": true,
-                "secondary_depth_range": 0
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:cracked_plains"
+                ]
               },
               "then_run": {
-                "type": "minecraft:block",
-                "result_state": {
-                  "Name": "marsmod:regolith_loose"
-                }
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_dry"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "ceiling",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:rock"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_loose"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:ice_plains"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:steep"
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": true,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:block",
+                        "result_state": {
+                          "Name": "marsmod:rock"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:sequence",
+                      "sequence": [
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:y_above",
+                            "anchor": {
+                              "absolute": 75
+                            },
+                            "surface_depth_multiplier": 2,
+                            "add_stone_depth": false
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:regolith_dry"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "minecraft:surface",
+                            "min_threshold": -0.55,
+                            "max_threshold": 10.0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:ice"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "ceiling",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:rock"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_loose"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:hills"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:steep"
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": true,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:block",
+                        "result_state": {
+                          "Name": "marsmod:rock"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:sequence",
+                      "sequence": [
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "minecraft:surface",
+                            "min_threshold": 0.45,
+                            "max_threshold": 10.0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:rock"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "minecraft:surface",
+                            "min_threshold": -10.0,
+                            "max_threshold": -0.25
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:regolith_loose"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "ceiling",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:rock"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_loose"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:jagged_peaks"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:steep"
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": true,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:block",
+                        "result_state": {
+                          "Name": "marsmod:rock"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:noise_threshold",
+                        "noise": "minecraft:surface",
+                        "min_threshold": 0.3,
+                        "max_threshold": 10.0
+                      },
+                      "then_run": {
+                        "type": "minecraft:block",
+                        "result_state": {
+                          "Name": "marsmod:regolith_loose"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:frozen_peaks"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:steep"
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": true,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:block",
+                        "result_state": {
+                          "Name": "marsmod:rock"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:y_above",
+                      "anchor": {
+                        "absolute": 120
+                      },
+                      "surface_depth_multiplier": 4,
+                      "add_stone_depth": false
+                    },
+                    "then_run": {
+                      "type": "minecraft:sequence",
+                      "sequence": [
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:stone_depth",
+                            "offset": 0,
+                            "surface_type": "floor",
+                            "add_surface_depth": false,
+                            "secondary_depth_range": 0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:regolith_dry"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:stone_depth",
+                            "offset": 0,
+                            "surface_type": "floor",
+                            "add_surface_depth": true,
+                            "secondary_depth_range": 0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:regolith_dry"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:windswept_hills"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:sequence",
+                      "sequence": [
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:noise_threshold",
+                            "noise": "minecraft:surface",
+                            "min_threshold": 0.25,
+                            "max_threshold": 10.0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:rock"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:stone_depth",
+                            "offset": 0,
+                            "surface_type": "floor",
+                            "add_surface_depth": false,
+                            "secondary_depth_range": 0
+                          },
+                          "then_run": {
+                            "type": "minecraft:sequence",
+                            "sequence": [
+                              {
+                                "type": "minecraft:condition",
+                                "if_true": {
+                                  "type": "minecraft:noise_threshold",
+                                  "noise": "minecraft:surface",
+                                  "min_threshold": -10.0,
+                                  "max_threshold": -0.25
+                                },
+                                "then_run": {
+                                  "type": "minecraft:block",
+                                  "result_state": {
+                                    "Name": "marsmod:regolith_dry"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "minecraft:block",
+                                "result_state": {
+                                  "Name": "marsmod:regolith_loose"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:stone_depth",
+                            "offset": 0,
+                            "surface_type": "ceiling",
+                            "add_surface_depth": false,
+                            "secondary_depth_range": 0
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "marsmod:rock"
+                            }
+                          }
+                        },
+                        {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_loose"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "marsmod:eroded_badlands"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": false,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "marsmod:regolith_dry"
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:sequence",
+                    "sequence": [
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 419
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 417
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 412
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 411
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 408
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 406
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 402
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 399
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 397
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 395
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 390
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 389
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 386
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 384
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 380
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 377
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 375
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 373
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 368
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 367
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 364
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 362
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 358
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 355
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 353
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 351
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 346
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 345
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 342
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 340
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 336
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 333
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 331
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 329
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 324
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 323
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 320
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 318
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 314
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 311
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 309
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 307
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 302
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 301
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 298
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 296
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 292
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 289
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 287
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 285
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 280
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 279
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 276
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 274
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 270
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 267
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 265
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 263
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 258
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 257
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 254
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 252
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 248
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 245
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 243
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 241
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 236
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 235
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 232
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 230
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 226
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 223
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 221
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 219
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 214
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 213
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 210
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 208
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 204
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 201
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 199
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 197
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 192
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 191
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 188
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 186
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 182
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 179
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 177
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 175
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 170
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 169
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 166
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 164
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 160
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 157
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 155
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 153
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 148
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 147
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 144
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 142
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 138
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 135
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 133
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 131
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 126
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 125
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 122
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 120
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 116
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 113
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 111
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 109
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 104
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 103
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 100
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 98
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 94
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 91
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 89
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 87
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 82
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 81
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 78
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 76
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 72
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 69
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 67
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 65
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 60
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 59
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 56
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 54
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:regolith_dry"
+                          }
+                        }
+                      },
+                      {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 50
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "marsmod:rock"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             }
           ]
