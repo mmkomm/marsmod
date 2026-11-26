@@ -2,7 +2,9 @@
   "attributes": {
     "minecraft:visual/sky_color": "#c99656"
   },
-  "carvers": [],
+  "carvers": [
+    "marsmod:canyon"
+  ],
   "downfall": 0.0,
   "effects": {
     "water_color": "#3f76e4"

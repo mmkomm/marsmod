@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1823467611,
+    "spacing": 150,
+    "separation": 60
+  },
+  "structures": [
+    {
+      "structure": "marsmod:giant_crater",
+      "weight": 1
+    }
+  ]
+}

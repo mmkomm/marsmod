@@ -1,0 +1,251 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "minecraft:cache_2d",
+    "argument": {
+      "type": "minecraft:add",
+      "argument1": "marsmod:mars/mountain_offset",
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": {
+          "type": "minecraft:mul",
+          "argument1": {
+            "type": "minecraft:add",
+            "argument1": {
+              "type": "minecraft:mul",
+              "argument1": 0.55,
+              "argument2": {
+                "type": "minecraft:clamp",
+                "min": 0.0,
+                "max": 1.0,
+                "input": {
+                  "type": "minecraft:add",
+                  "argument1": 4.0,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": -4.0,
+                    "argument2": {
+                      "type": "minecraft:mul",
+                      "argument1": {
+                        "type": "minecraft:add",
+                        "argument1": {
+                          "type": "minecraft:abs",
+                          "argument": {
+                            "type": "minecraft:shifted_noise",
+                            "noise": "marsmod:huge_canyon",
+                            "xz_scale": 1.0,
+                            "y_scale": 0.0,
+                            "shift_x": {
+                              "type": "minecraft:mul",
+                              "argument1": 40.0,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_warp_x",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            },
+                            "shift_y": 0.0,
+                            "shift_z": {
+                              "type": "minecraft:mul",
+                              "argument1": 40.0,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_warp_z",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            }
+                          }
+                        },
+                        "argument2": {
+                          "type": "minecraft:mul",
+                          "argument1": 0.012,
+                          "argument2": {
+                            "type": "minecraft:noise",
+                            "noise": "marsmod:huge_canyon_rough",
+                            "xz_scale": 1.0,
+                            "y_scale": 0.0
+                          }
+                        }
+                      },
+                      "argument2": {
+                        "type": "minecraft:invert",
+                        "argument": {
+                          "type": "minecraft:clamp",
+                          "min": 0.025,
+                          "max": 0.1,
+                          "input": {
+                            "type": "minecraft:add",
+                            "argument1": 0.05,
+                            "argument2": {
+                              "type": "minecraft:mul",
+                              "argument1": 0.022500000000000003,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_width",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": 0.45,
+              "argument2": {
+                "type": "minecraft:clamp",
+                "min": 0.0,
+                "max": 1.0,
+                "input": {
+                  "type": "minecraft:add",
+                  "argument1": 2.0,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": -4.0,
+                    "argument2": {
+                      "type": "minecraft:mul",
+                      "argument1": {
+                        "type": "minecraft:add",
+                        "argument1": {
+                          "type": "minecraft:abs",
+                          "argument": {
+                            "type": "minecraft:shifted_noise",
+                            "noise": "marsmod:huge_canyon",
+                            "xz_scale": 1.0,
+                            "y_scale": 0.0,
+                            "shift_x": {
+                              "type": "minecraft:mul",
+                              "argument1": 40.0,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_warp_x",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            },
+                            "shift_y": 0.0,
+                            "shift_z": {
+                              "type": "minecraft:mul",
+                              "argument1": 40.0,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_warp_z",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            }
+                          }
+                        },
+                        "argument2": {
+                          "type": "minecraft:mul",
+                          "argument1": 0.012,
+                          "argument2": {
+                            "type": "minecraft:noise",
+                            "noise": "marsmod:huge_canyon_rough",
+                            "xz_scale": 1.0,
+                            "y_scale": 0.0
+                          }
+                        }
+                      },
+                      "argument2": {
+                        "type": "minecraft:invert",
+                        "argument": {
+                          "type": "minecraft:clamp",
+                          "min": 0.025,
+                          "max": 0.1,
+                          "input": {
+                            "type": "minecraft:add",
+                            "argument1": 0.05,
+                            "argument2": {
+                              "type": "minecraft:mul",
+                              "argument1": 0.022500000000000003,
+                              "argument2": {
+                                "type": "minecraft:noise",
+                                "noise": "marsmod:huge_canyon_width",
+                                "xz_scale": 1.0,
+                                "y_scale": 0.0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "argument2": {
+            "type": "minecraft:clamp",
+            "min": 0.0,
+            "max": 1.0,
+            "input": {
+              "type": "minecraft:add",
+              "argument1": -2.0,
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": 10.0,
+                "argument2": {
+                  "type": "minecraft:noise",
+                  "noise": "marsmod:huge_canyon_region",
+                  "xz_scale": 1.0,
+                  "y_scale": 0.0
+                }
+              }
+            }
+          }
+        },
+        "argument2": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:max",
+            "argument1": {
+              "type": "minecraft:add",
+              "argument1": -1.234375,
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": 0.0625,
+                "argument2": {
+                  "type": "minecraft:noise",
+                  "noise": "marsmod:huge_canyon_floor",
+                  "xz_scale": 1.0,
+                  "y_scale": 0.0
+                }
+              }
+            },
+            "argument2": {
+              "type": "minecraft:add",
+              "argument1": {
+                "type": "minecraft:add",
+                "argument1": "marsmod:mars/mountain_offset",
+                "argument2": -1.171875
+              },
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": -0.234375,
+                "argument2": {
+                  "type": "minecraft:noise",
+                  "noise": "marsmod:huge_canyon_floor",
+                  "xz_scale": 1.0,
+                  "y_scale": 0.0
+                }
+              }
+            }
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": -1.0,
+            "argument2": "marsmod:mars/mountain_offset"
+          }
+        }
+      }
+    }
+  }
+}

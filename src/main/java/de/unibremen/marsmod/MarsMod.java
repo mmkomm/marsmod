@@ -7,6 +7,7 @@ import com.mojang.logging.LogUtils;
 import de.unibremen.marsmod.registry.ModBlocks;
 import de.unibremen.marsmod.registry.ModCreativeTabs;
 import de.unibremen.marsmod.registry.ModItems;
+import de.unibremen.marsmod.registry.ModStructures;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -20,5 +21,7 @@ public class MarsMod {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
+        ModStructures.TYPES.register(modEventBus);
+        ModStructures.PIECES.register(modEventBus);
     }
 }
